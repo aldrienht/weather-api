@@ -23,9 +23,13 @@ Beyond the basic use case of retrieving weather information for a specific city,
 # API endpoint
 
   Path: "/api/get_weather"
+
   Request Format: JSON
+
   Required Parameter: "city"
+
     > Example: "/api/get_weather.json?city=Manila"
+
     > Result: JSON data
 
 
@@ -41,20 +45,28 @@ If you already set up your local Rails environment continue on this step, otherw
 4. Access the Application:
   Open your web browser and navigate to http://localhost:3000. You should see your Rails application running.
 5. Get weather information for specific "city"
+
   Navigate to /get_weather path and pass the "city" as parameter to get the Weather info.
+
   Example: http://localhost:3000/get_weather?city=Manila 
 
 
 # How to add environment variables to App
-  1. In your app directory, create a file named ".env" and supply your own values for the following keys:
+
+  In your app directory, create a file named ".env" and supply your own values for the following keys:
+
     • OPENWEATHERMAP_API_KEY=add-api-key-here
       > Sign up for free in https://openweathermap.org
+
       > Navigate to https://home.openweathermap.org/api_keys to generate/get your API Key
+
       > Screenshot here: http://tinyurl.com/yr55uub5
 
     • UPTRACE_DSN=https://sample-only-add-your-own@api.uptrace.dev?grpc=4317
       > Sign up or login to Uptrace https://app.uptrace.dev/auth/login
+
       > Once logged-in create an Uptrace project to obtain a DSN (connection string), for example, https://token@api.uptrace.dev/project_id.
+
       > Screenshot here: http://tinyurl.com/yqj29jcq
 
 
@@ -80,6 +92,12 @@ Prerequisites:
 # Visit Uptrace Dashboard to see metrics
   • When you already signed up and logged in to Uptrace, choose your created Project and navigate to pages like
   Overview, Traces & Log, Dashboards, Compare etc... to see full generated metrics.
+
+  Sample Screenshots:
+
+  - http://tinyurl.com/yscxwqno
+  - http://tinyurl.com/yukhua6x
+  - http://tinyurl.com/yukhua6x
 
 
 # Suggestions for improvement
@@ -118,6 +136,6 @@ Prerequisites:
 
   For example:
 
-    • Implement caching mechanisms for API responses
+    * Implement caching mechanisms for API responses
     
-    • Cloud Auto-Scaling - Utilize cloud provider services for auto-scaling, allowing the infrastructure to dynamically adjust based on demand.
+    * Cloud Auto-Scaling - Utilize cloud provider services for auto-scaling, allowing the infrastructure to dynamically adjust based on demand.
