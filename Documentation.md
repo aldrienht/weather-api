@@ -22,9 +22,10 @@ Beyond the basic use case of retrieving weather information for a specific city,
 
 # API endpoint
 
-  Path: "/get_weather"
+  Path: "/api/get_weather"
+  Request Format: JSON
   Required Parameter: "city"
-    > Example: "/get_weather?city=Manila"
+    > Example: "/api/get_weather.json?city=Manila"
     > Result: JSON data
 
 
