@@ -86,22 +86,31 @@ Prerequisites:
 # Suggestions for improvement
 • Authentication and Authorization
   If our API is meant for public consumption, let's consider implementing API key authentication for better security. If it's intended for internal use, set up proper user authentication and authorization.
+
 • Rate Limiting
   Implement rate limiting to prevent abuse of your API. This helps control the number of requests a user can make within a specific time frame.
+
     Option #1: Use a Gem
       Consider using a gem that provides rate limiting functionality. One popular gem is rack-attack. It allows you to define custom throttles for different routes and actions in your Rails application.
+
     Option #2: Store Data for Rate Limiting
       Use a data store to keep track of request counts, such as Redis or a database.
+
     Option #3: Response Headers
       Include rate limit information in your response headers to provide clients with details about their remaining requests and reset times. These headers allows the client to adjust its behavior based on the rate limit information.
+
 • Refactor Code:
   Review the codebase for opportunities to refactor and improve code quality.
+
 • Unit and Integration Testing
   Expand our test suite to cover more scenarios. Ensure that both unit tests and integration tests are comprehensive, covering various edge cases and potential issues.
+
 • Extend Functionality
   Explore adding more features to our API, such as historical weather data, multiple city queries, or support for different weather providers.
+
 • Scalability
   Design our application with scalability in mind. Monitor and plan for potential increases in traffic.
+  
   For example,
     • Implement caching mechanisms for API responses
     • Cloud Auto-Scaling - Utilize cloud provider services for auto-scaling, allowing the infrastructure to dynamically adjust based on demand.
