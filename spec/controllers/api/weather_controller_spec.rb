@@ -1,13 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe WeatherController, type: :controller do
-  describe "GET #index" do
-    it "renders edit page and assigns value" do
-      get :index, params: {}, format: :html
-      expect(response).to render_template(:index)
-    end
-  end
-
+RSpec.describe Api::WeatherController, type: :controller do
   describe "GET #show" do
     before do
       allow(GetWeatherInfo).to receive(:call).and_return({
@@ -19,7 +12,7 @@ RSpec.describe WeatherController, type: :controller do
     end
 
     it "renders weather info" do
-      get :show, params: {city: "Manila"}, format: :html
+      get :show, params: {city: "Manila"}, format: :json
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to match(/application\/json/)
     end

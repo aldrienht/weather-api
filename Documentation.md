@@ -73,7 +73,7 @@ Prerequisites:
     Open your web browser and navigate to http://localhost:3000. You should see your Rails application running.
   7. Get weather information for specific "city"
     Navigate to /get_weather path and pass the "city" as parameter to get the Weather info.
-    Example: http://localhost:3000/get_weather?city=Manila 
+    Example: http://localhost:3000/api/get_weather.json?city=manila
 
 
 # Visit Uptrace Dashboard to see metrics

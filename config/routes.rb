@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  get '/get_weather', to: 'weather#show'
-  root "weather#index"
+  namespace :api do
+    get '/get_weather/', to: 'weather#show'
+  end
+
+  root "dashboard#index"
 end
