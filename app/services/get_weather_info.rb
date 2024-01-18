@@ -1,7 +1,7 @@
 class GetWeatherInfo < ApplicationService
   include HTTParty
 
-  attr_reader :city
+  attr_reader :city, :api_key
 
   BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'.freeze
 
@@ -15,7 +15,7 @@ class GetWeatherInfo < ApplicationService
     if response.success?
       response.parsed_response
     else
-      { error: 'Failed to fetch weather data' }
+      { error: "Failed to fetch weather data for city: #{city}", cod: "404" }
     end
   end
 
@@ -23,8 +23,8 @@ class GetWeatherInfo < ApplicationService
 
   def query_params
     {
-      q: @city,
-      appid: @api_key,
+      q: city,
+      appid: api_key,
       units: 'metric' # change to 'imperial' for Fahrenheit
     }
   end

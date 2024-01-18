@@ -48,7 +48,7 @@ RSpec.describe GetWeatherInfo, type: :service do
 
       it 'returns an error for an invalid city' do
         weather_info = GetWeatherInfo.call('nonexistentcity')
-        expect(weather_info).to eq({:error=>"Failed to fetch weather data"})
+        expect(weather_info).to eq({:cod=>"404", :error=>"Failed to fetch weather data for city: nonexistentcity"})
       end
     end
 
@@ -61,7 +61,7 @@ RSpec.describe GetWeatherInfo, type: :service do
 
       it "returns an error response for a failed request" do
         result = described_class.call(test_city)
-        expect(result).to eq({ error: 'Failed to fetch weather data' })
+        expect(result).to eq({:cod=>"404", :error=>"Failed to fetch weather data for city: #{test_city}"})
       end
     end
   end

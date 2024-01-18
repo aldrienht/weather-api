@@ -53,7 +53,7 @@ If you already set up your local Rails environment continue on this step, otherw
 
     • UPTRACE_DSN=https://sample-only-add-your-own@api.uptrace.dev?grpc=4317
       > Sign up or login to Uptrace https://app.uptrace.dev/auth/login
-      > Once logged in, click the "Cog or Setting" icon and look for DSN tab to get your DSN url
+      > Once logged-in create an Uptrace project to obtain a DSN (connection string), for example, https://token@api.uptrace.dev/project_id.
       > Screenshot here: http://tinyurl.com/yqj29jcq
 
 
@@ -77,17 +77,17 @@ Prerequisites:
 
 
 # Visit Uptrace Dashboard to see metrics
-  1. When you already signed up and logged in to Uptrace, and `rails server` is running successfully,
-  check your terminal and look for something similar to:
-    > Uptrace URL: https://app.uptrace.dev/traces/17ab53843f72fa00242d268abd503407?span_id=1742ad59d11c265d
-  2. Finally, copy the generated URL on your terminal and open it in any browser.
+  • When you already signed up and logged in to Uptrace, choose your created Project and navigate to pages like
+  Overview, Traces & Log, Dashboards, Compare etc... to see full generated metrics.
 
 
 # Suggestions for improvement
 • Authentication and Authorization
+
   If our API is meant for public consumption, let's consider implementing API key authentication for better security. If it's intended for internal use, set up proper user authentication and authorization.
 
 • Rate Limiting
+
   Implement rate limiting to prevent abuse of your API. This helps control the number of requests a user can make within a specific time frame.
 
     Option #1: Use a Gem
@@ -100,17 +100,23 @@ Prerequisites:
       Include rate limit information in your response headers to provide clients with details about their remaining requests and reset times. These headers allows the client to adjust its behavior based on the rate limit information.
 
 • Refactor Code:
+
   Review the codebase for opportunities to refactor and improve code quality.
 
 • Unit and Integration Testing
+
   Expand our test suite to cover more scenarios. Ensure that both unit tests and integration tests are comprehensive, covering various edge cases and potential issues.
 
 • Extend Functionality
+
   Explore adding more features to our API, such as historical weather data, multiple city queries, or support for different weather providers.
 
 • Scalability
+
   Design our application with scalability in mind. Monitor and plan for potential increases in traffic.
-  
-  For example,
+
+  For example:
+
     • Implement caching mechanisms for API responses
+    
     • Cloud Auto-Scaling - Utilize cloud provider services for auto-scaling, allowing the infrastructure to dynamically adjust based on demand.
