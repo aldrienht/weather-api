@@ -3,7 +3,7 @@
 This is a simple Weather API application made using Ruby on Rails with OpenWeatherMap API.
 The purpose of this app is to quickly get the weather information of specific "city" around the world.
 
-Beyond the basic use case of retrieving weather information for a specific city, your simple Weather API can be utilized for various purposes. Here are some additional use cases:
+Beyond the basic use case of retrieving weather information for a specific city, this simple Weather API can be utilized for various purposes. Here are some additional use cases:
   1. Weather Notifications
     Provide users with the ability to subscribe to weather notifications for specific cities. Notifications can be sent via email, mobile push notifications, or even SMS.
   2. Weather Widgets
@@ -31,6 +31,14 @@ Beyond the basic use case of retrieving weather information for a specific city,
     > Example: "/api/get_weather.json?city=Manila"
 
     > Result: JSON data
+
+  See in Action, with the following options:
+
+    > You can use curl command in terminal e.g. curl "http://127.0.0.1:3000/api/get_weather.json?city=Manila"
+
+    > If you have Postman installed or in browser
+
+    > Or simply run the app and navigate to given URL above, it will render results in browser
 
 
 # How to run the app locally
