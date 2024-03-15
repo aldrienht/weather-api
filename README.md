@@ -31,7 +31,7 @@ Required Parameter: "city"
     > Example: "/api/get_weather.json?city=Manila"
 
     > Sample Result (JSON data):
-    ```
+    
     {
       coord: {
         lon: 120.9822,
@@ -75,16 +75,16 @@ Required Parameter: "city"
       id: 1701668,
       name: "Manila",
       cod: 200
-      }
-  ```
+    }
 
-  See in Action, with the following options:
+# See in Action, with the following options:
 
-    > You can use curl command in terminal e.g. curl "http://127.0.0.1:3000/api/get_weather.json?city=Manila"
+ > You can use curl command in terminal e.g. curl "http://127.0.0.1:3000/api/get_weather.json?city=Manila"
 
-    > If you have Postman installed or in browser
+ > If you have Postman installed or in browser
 
-    > Or simply run the app and navigate to given URL above, it will render results in browser
+ > Or simply run the app and navigate to given URL above, it will render results in browser
+
 
 
 # How to run the app locally
@@ -193,4 +193,3 @@ Prerequisites:
     * Implement caching mechanisms for API responses
 
     * Cloud Auto-Scaling - Utilize cloud provider services for auto-scaling, allowing the infrastructure to dynamically adjust based on demand.
-```
